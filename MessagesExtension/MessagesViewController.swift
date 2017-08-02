@@ -83,7 +83,6 @@ class MessagesViewController: MSMessagesAppViewController {
         let image = Bundle.main.path(forResource: "elephant@3x", ofType: "png")
         let url = URL.init(fileURLWithPath: image!)
         do {
-            self.stickerView.sticker = nil
             let sticker = try MFSticker.init(contentsOfFileURL: url, localizedDescription: "")
             self.stickerView.sticker = sticker
             self.stickerView.startAnimating()
